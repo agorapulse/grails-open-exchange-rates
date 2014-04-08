@@ -58,6 +58,30 @@ result = segmentioService.latest(base: 'EUR')
 def currencies = segmentioService.currencies()
 ```
 
+Latest rates are returned with the following format
+
+```json
+{
+    "disclaimer": "Exchange rates provided by [...]",
+    "license": "Data collected and blended [...]",
+    "timestamp": 1319730758,
+    "base": "USD",
+    "rates": {
+        "AED": 3.672626,
+        "AFN": 48.3775,
+        "ALL": 110.223333,
+        "AMD": 409.604993,
+        /* 160 fx rates available - see currencies.json */
+        "YER": 215.035559,
+        "ZAR": 8.416205,
+        "ZMK": 4954.411262,
+        "ZWL": 322.355011
+    }
+}
+```
+
+Check [Open Exchange Rates documentation](https://openexchangerates.org/documentation) for more info.
+
 
 # Latest releases
 
