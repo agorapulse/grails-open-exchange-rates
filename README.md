@@ -85,9 +85,9 @@ Check [Open Exchange Rates documentation](https://openexchangerates.org/document
 
 # Latest releases
 
-* 2014-04-08 **V0.1** : Initial release
+* 2014-04-16 **V0.1** : Initial release
 
 
 # Bugs
 
-To report any bug, please use the project [Issues](http://github.com/benorama/grails-open-exchange-rates/issues) section on GitHub.
+To report any bug, please use the project [Issues](http://github.com/agorapulse/grails-open-exchange-rates/issues) section on GitHub.
