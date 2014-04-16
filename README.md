@@ -44,18 +44,16 @@ grails.plugin.openexchangerates.appId = {APP_ID}
 You can inject _openExchangeRatesService_ in any of your Grails artefacts (controllers, services...) in order to call [Open Exchange Rates APIs](https://openexchangerates.org/documentation).
 
 ```groovy
-def openExchangeRatesService
-
 // Get latest rates
-def result = segmentioService.latest()
+def result = openExchangeRatesService.latest()
 println new Date(result.timestamp)
 println result.rates['EUR']
 
 // By default (free account), it will use USD as base currency but you can use other currency
-result = segmentioService.latest(base: 'EUR')
+result = openExchangeRatesService.latest(base: 'EUR')
 
 // Get full currency names
-def currencies = segmentioService.currencies()
+def currencies = openExchangeRatesService.currencies()
 ```
 
 Latest rates are returned with the following format
