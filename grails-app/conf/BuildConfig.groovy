@@ -21,18 +21,24 @@ grails.project.dependency.resolution = {
         mavenCentral()
     }
     dependencies {
+        // Latest httpcore and httpmime for Coveralls plugin
+        build 'org.apache.httpcomponents:httpcore:4.3.2'
+        build 'org.apache.httpcomponents:httpclient:4.3.2'
+        build 'org.apache.httpcomponents:httpmime:4.3.3'
+        // Latest HttpBuilder
         compile('org.codehaus.groovy.modules.http-builder:http-builder:0.7') {
             excludes 'commons-logging', 'xml-apis', 'groovy'
         }
     }
 
     plugins {
-        //build ':tomcat:7.0.52.1'
-        build(":release:3.0.1",
-              ":rest-client-builder:1.0.3") {
+        build(':release:3.0.1',
+                ':rest-client-builder:1.0.3',
+                ':coveralls:0.1') {
             export = false
         }
-
-        //runtime ':console:1.3'
+        test(':code-coverage:1.2.7') {
+            export = false
+        }
     }
 }
