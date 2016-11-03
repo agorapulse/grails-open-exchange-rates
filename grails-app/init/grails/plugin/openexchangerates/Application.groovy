@@ -1,4 +1,4 @@
-package segment
+package grails.plugin.openexchangerates
 
 import grails.boot.*
 import grails.boot.config.GrailsAutoConfiguration
