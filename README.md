@@ -20,7 +20,7 @@ repositories {
 }
 dependencies {
     ...
-    compile "org.grails.plugins:grails-open-exchange-rates:2.4.0"
+    compile "org.grails.plugins:grails-open-exchange-rates:1.0"
 }
 ```
 
