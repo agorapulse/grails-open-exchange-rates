@@ -8,6 +8,10 @@ buildscript {
     }
 }
 
+plugins {
+    id 'com.jfrog.artifactory' version '4.4.0'
+}
+
 version "1.0"
 group "org.grails.plugins"
 
@@ -15,7 +19,6 @@ apply plugin:"eclipse"
 apply plugin:"idea"
 apply plugin:"org.grails.grails-plugin"
 apply plugin:"org.grails.grails-plugin-publish"
-apply plugin:"org.grails.grails-gsp"
 
 repositories {
     mavenLocal()

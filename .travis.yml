@@ -4,9 +4,9 @@ sudo: false
 
 env:
   global:
-    secure: // TODO
+    secure: # TODO
   glob:
-    secure: // TODO
+    secure: # TODO
 
 script:
 - "./gradlew clean assemble --stacktrace"
