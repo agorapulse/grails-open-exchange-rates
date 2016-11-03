@@ -1,7 +1,15 @@
 language: groovy
-jdk: oraclejdk7
+jdk: oraclejdk8
+sudo: false
+
+env:
+  global:
+    secure: // TODO
+  glob:
+    secure: // TODO
+
 script:
-- ./grailsw refresh-dependencies
-- ./grailsw "test-app -coverage -xml"
+- "./gradlew clean assemble --stacktrace"
+
 after_success:
-- ./grailsw coveralls
+- "./travis-publish.sh"

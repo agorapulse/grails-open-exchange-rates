@@ -1,6 +1,9 @@
 Open Exchange Rates Grails Plugin
 =================================
 
+[![Build Status](https://travis-ci.org/agorapulse/grails-grails-open-exchange-rates.png)](https://travis-ci.org/agorapulse/grails-segment)
+[![Download](https://api.bintray.com/packages/agorapulse/plugins/grails-open-exchange-rates/images/download.svg)](https://bintray.com/agorapulse/plugins/grails-open-exchange-rates/_latestVersion)
+
 # Introduction
 
 The **Open Exchange Rates Plugin** allows you to integrate [Open Exchange Rates](http://https://openexchangerates.org/) in your [Grails](http://grails.org) application.
@@ -8,22 +11,16 @@ The **Open Exchange Rates Plugin** allows you to integrate [Open Exchange Rates]
 
 # Installation
 
-Declare the plugin dependency in the BuildConfig.groovvy file, as shown here:
+Declare the plugin dependency in the _build.gradle_ file, as shown here:
 
 ```groovy
-grails.project.dependency.resolution = {
-		inherits("global") { }
-		log "info"
-		repositories {
-				//your repositories
-		}
-		dependencies {
-				//your regular dependencies
-		}
-		plugins {
-				//here go your plugin dependencies
-				runtime ':open-exchange-rates:0.1'
-		}
+repositories {
+    ...
+    maven { url "http://dl.bintray.com/agorapulse/grails-open-exchange-rates" }
+}
+dependencies {
+    ...
+    compile "org.grails.plugins:grails-open-exchange-rates:2.4.0"
 }
 ```
 
@@ -32,10 +29,13 @@ grails.project.dependency.resolution = {
 
 Create an account on [Open Exchange Rates](http://https://openexchangerates.org/), in order to get your own app ID.
 
-Add your app parameters to your _grails-app/conf/Config.groovy_:
+Add your app parameters to your _grails-app/conf/application.yml_:
 
-```groovy
-grails.plugin.openexchangerates.appId = {APP_ID}
+```yml
+grails:
+    plugin:
+        openexchangerates:
+            appId: {APP_ID} # Write ID
 ```
 
 
