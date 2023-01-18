@@ -6,6 +6,11 @@ Open Exchange Rates Grails Plugin
 
 # Introduction
 
+IMPORTANT: Project retirement
+-------------------------------
+
+**This project is retired.**
+
 The **Open Exchange Rates Plugin** allows you to integrate [Open Exchange Rates](http://https://openexchangerates.org/) in your [Grails](http://grails.org) application.
 
 
